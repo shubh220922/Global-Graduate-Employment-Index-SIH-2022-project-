@@ -1,0 +1,38 @@
+body {
+    background-color: lightblue;;
+}
+
+#header-div {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#body-one {
+    display: flex;
+    flex-direction: row;
+    height: 66vh; 
+     /* background:lightskyblue; */
+     border-radius: 5px;
+}
+
+#body-one-right-img {
+    height: 63vh;
+    width: 50vw;
+    border-radius: 10%;
+    margin-right: 4px;
+}
+
+#body-two {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    /* background-color: lightskyblue; */
+}
+
+#body-two-container-left-img {
+  height: 68vh;
+  width: 50vw;
+  border-radius: 10%;
+}
