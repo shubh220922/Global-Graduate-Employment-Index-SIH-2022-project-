@@ -36,3 +36,13 @@ body {
   width: 50vw;
   border-radius: 10%;
 }
+
+#test-graph-one {
+    display: flex;
+    justify-content: center;
+}
+
+#graph {
+    height : 50vh;
+    width : 70vw;
+}
