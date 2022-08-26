@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style1.css" type="text/css">
+    <title>Register</title>
+</head>
+<body>
+
+    <form action="action_page.php">
+        <div class="container">
+          <h1>Register</h1>
+          <p>Kindly answer the following questions</p>
+
+          <hr>
+          <br>
+          <br>
+
+          <fieldset>
+            <legend>Kindly choose what is your educational facility type</legend>
+            <p>
+                <input type="radio" name="Educational-facility-type" id="University">
+                <label>University</label>
+            </p>
+            <p>
+                <input type="radio" name="Educational-facility-type" id="Institute">
+                <label>Institute</label>
+            </p>
+            
+        </fieldset>
+
+          <br><br>
+
+        
+
+          <label><b>Enter the name of your University/institute</b></label>
+          <input type="text" placeholder="University Name" id="university-name" required>
+      
+          
+          
+          
+          
+           <br> <br><br>
+          <label><b>Enter the state in which your university is in</b></label>
+          <input type="text" placeholder="University Location" id="state-of-university" required>
+          
+          
+        <br>
+       
+
+       
+        </div>
+    </form>
+
+    <section class="contact-form">
+      
+        <form>
+          <fieldset>
+          <div class="input-group">
+            <legend>
+            <p class="group-label">Kindly check the different degree programs your college offers</p>
+        </legend>
+            <input id="B-tech" name="Degree-type" type="checkbox" value="Btech"/>
+            <label class="inline" for="Btech">B.tech</label><br> <br>
+            <input id="B-arch" name="Degree-type" type="checkbox" value="B.Arch"/>
+            <label class="inline" for="Barch">B.Arch</label><br> <br>
+            <input id="B-com" name="Degree-type" type="checkbox" value="B.com"/>
+            <label class="inline" for="Bcom">B.com</label><br> <br>
+            <input id="B-ba" name="Degree-type" type="checkbox" value="B.ba"/>
+            <label class="inline" for="Bba">B.ba</label>
+          </div>
+        </fieldset>
+          <input  type="hidden"/>
+          <br>
+
+          <button type="submit" class="register-btn">
+           <a>Save</a>
+        </button>
+
+        <button>
+            <a href="../html/templates/details_of_courses.html">Next</a>
+        </button>
+        </form>
+      </section>
+      
+      <!-- <div class="results">
+        <h2>Form Data</h2>
+        <pre></pre> -->
+      
+      <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+      
+     <script src="../html/registrationjs.js"></script>
+
+</body>
+</html>
