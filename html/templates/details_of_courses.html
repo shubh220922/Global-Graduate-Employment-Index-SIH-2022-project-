@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,16 +127,20 @@ a {
 
 </style>
 <body>
-    <p style="font-size:3rem;"><b>Kindly enter all the programming languages that your courses offer:</b></p><br>
+    <p style="font-size:3rem;"><b>Kindly enter all the courses that are offered :</b></p><br>
     <!-- <textarea name="coursesoffered" id="coursesoffered" cols="30" rows="10"></textarea> -->
     <br>
     <label for="fname">Enter your data: </label> <input type="text" id="fname" name="fname">
     <br>
     <!-- <button><a href="../html/graph_html_page.html" onclick="myfunction()">Submit</a></button> depricated-->
 
-    <button type="submit" onclick='myfunction();'>Click Here to see your data</button>
+    <a href="/graph_html_page/"><button type="submit" onclick='myfunction();'>Click Here to see your data</button></a>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- <a href="/graph_html_page/"><button>Next</button></a> -->
+
     <script>
     function myfunction() {
 
@@ -147,13 +152,18 @@ a {
         const dict_values = {firstname} //Pass the javascript variables to a dictionary.
         const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
         console.log(s); // Prints the variables to console window, which are in the JSON format
-        window.alert(s)
+        
         $.ajax({
             url:"/test",
             type:"POST",
             contentType: "application/json",
-            data: JSON.stringify(s)});
-
+            data: JSON.stringify(s),
+            dataType: "json",
+            // success: function (response) {
+            //             alert("Hello: " + response.Name + " .\nCurrent Date and Time: " + response.DateTime);
+          });
+       
+        
 }
 
 </script>

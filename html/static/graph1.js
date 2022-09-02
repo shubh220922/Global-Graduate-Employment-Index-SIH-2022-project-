@@ -73,7 +73,7 @@ async function charit() {
 }
 
 async function getDATA() {
-  const response = await fetch("/static/graph1_number_of_employees.csv");
+  const response = await fetch('/static/graph1_number_of_employees.csv');
   const data = await response.text();
   const rows = data.split("\n");
   const sliced_rows = rows.slice(1); // this will remove the topmost head row

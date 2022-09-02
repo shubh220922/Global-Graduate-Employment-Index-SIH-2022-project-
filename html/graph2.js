@@ -17,60 +17,130 @@
 
   charit();
 
-async function charit() {
-  // await getDATA_avg_weekly_1();
-  await getDATA_avg_hourly_1();
-  // await getDATA_avg_weekly_3();
+// async function charit() {
+//   // await getDATA_avg_weekly_1();
+//   await getDATA_avg_hourly_1();
+//   // await getDATA_avg_weekly_3();
 
-  const ctx = document.getElementById("chart2").getContext("2d");
+//   const ctx = document.getElementById("chart2").getContext("2d");
 
   
+//   const myChart = new Chart(ctx, {
+//     type: "line",
+//     data: {
+//       labels: xlabels2_1,
+//       datasets: [
+//         {
+//           label:"-Average-hourly-earnings-of-production-and-nonsupervisory-employees-1982-84-computer-systems-design-services-not-seasonally",
+//           data: ytemps3_2, 
+//           backgroundColor: ["rgba(55, 109, 102, 0.2)"],
+//           tension: 0.4,
+
+//           pointBackgroundColor: function(context) {
+//             var index = context.dataIndex;
+//             var value = context.dataset.data[index];
+            
+//             if(index >= 300)
+//              return 'purple'
+//              else
+//              return 'red'
+//         }
+//      }],
+    
+
+//     options: {
+//           scales: {
+//             y: {
+//               beginAtZero: true,
+//             },
+//           },
+        
+//         plugins: {
+//           zoom: {
+//             zoom: {
+//               wheel: {
+//                 enabled: true,
+//               },
+//               pinch: {
+//                 enabled: true
+//               },
+//               mode: 'xy',
+//             }
+//           }
+//         }
+//     }
+//  })};
+
+
+async function charit() {
+  await getDATA_avg_hourly_1();
+  // await getDATA2();
+  const ctx = document.getElementById("chart2").getContext("2d");
+
+  const ylabels = [];
   const myChart = new Chart(ctx, {
     type: "line",
     data: {
       labels: xlabels2_1,
       datasets: [
         {
-          label:"-Average-hourly-earnings-of-production-and-nonsupervisory-employees-1982-84-computer-systems-design-services-not-seasonally",
-          data: ytemps3_2, 
-          backgroundColor: ["rgba(55, 109, 102, 0.2)"],
+          label: "-Average-hourly-earnings-of-production-and-nonsupervisory-employees-1982-84-computer-systems-design-services-not-seasonally",
+          data: ytemps3_2,
+          backgroundColor: ["rgba(255, 99, 132, 0.2)"],
           tension: 0.4,
-
+          
           pointBackgroundColor: function(context) {
             var index = context.dataIndex;
             var value = context.dataset.data[index];
             
-            if(index >= 300)
+            if(index >= 396)
              return 'purple'
              else
              return 'red'
-        }
-     }],
-    
 
+        }
+      }],
+    
+  
+       
     options: {
           scales: {
             y: {
               beginAtZero: true,
             },
           },
-        
-        plugins: {
-          zoom: {
-            zoom: {
-              wheel: {
-                enabled: true,
-              },
-              pinch: {
-                enabled: true
-              },
-              mode: 'xy',
-            }
-          }
+        },
+  },
+
+  options: {
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'In years'
+       }
+      },
+        y: {
+            // ticks: {
+            //     // Include a dollar sign in the ticks
+            //     callback: function(value, index, ticks) {
+            //         return value + "000";
+            //     }
+            // },
+            beginAtZero: true,
+              title: {
+                 display: true,
+                 text: 'In thousands'
+              }
         }
       }
+    },
+    
   });
 }
+
+
+
 
 
 // async function getDATA_avg_weekly_1() {

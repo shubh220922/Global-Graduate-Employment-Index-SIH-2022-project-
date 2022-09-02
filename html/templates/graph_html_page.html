@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style1_under_html.css')}}" type="text/css">
+    <title>Graphs</title>
+    <script>
+        function myFunc(vars){
+            return vars
+        }
+    </script>
+</head>
+<body>
+    <p>{{data}}</p>
+    <!-- <canvas id="chart0"></canvas> -->
+    <br><br><hr>
+    <h1>Computer Science</h1>
+    <canvas id="chart"></canvas>
+    <br><br><hr>
+    <canvas id="chart2"></canvas> 
+    <br><br><hr>
+     <canvas id="chart3"></canvas>
+    <br><br><hr> 
+    <h1>Architecture</h1>
+    <canvas id="chart4"></canvas>
+    <br><br><hr>
+    <canvas id="chart5"></canvas> 
+    <br><br><hr>
+     <canvas id="chart6"></canvas>
+    <br><br><hr> 
+    <h1>Civil Engineering</h1>
+    <canvas id="chart7"></canvas>
+    <br><br><hr> 
+    <canvas id="chart8"></canvas>
+    <br><br><hr> 
+    <h1>Admissions</h1>
+    <canvas id="chart9"></canvas>
+
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    <!-- <script src="path/to/chartjs/dist/chart.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+
+
+    <!-- <script src="path/to/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script> -->
+
+
+
+    </script>
+      
+    <script src="{{url_for('static', filename='graph1.js')}}"></script>
+    <script src="{{url_for('static', filename='graph2.js')}}"></script>
+    <script src="{{url_for('static', filename='graph_bar.js')}}"></script>
+    <script src="{{url_for('static', filename='graph3_computer_science.js')}}"></script>
+    <script src="{{url_for('static', filename='graph4.js')}}"></script>
+    <script src="{{url_for('static', filename='graph5.js')}}"></script>
+    <script src="{{url_for('static', filename='graph6.js')}}"></script>
+    <script src="{{url_for('static', filename='graph7.js')}}"></script>
+    <script src="{{url_for('static', filename='graph8.js')}}"></script>
+    <script src="{{url_for('static', filename='graph9.js')}}"></script>
+
+
+
+
+</body>
+</html>
